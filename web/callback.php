@@ -18,26 +18,16 @@ if($type != "text"){
 }
 
 //返信データ作成
-if ($text == 'はい') {
+if ($text == 'えっちな子') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "こちらのおかしはいかがですか？",
+    "altText" => "こんなこどうですか？",
     "template" => [
       "type" => "buttons",
       "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
-      "title" => "○○レストラン",
-      "text" => "お探しのレストランはこれですね",
+      "title" => "ゆみ♡",
+      "text" => "22歳の大学生。えっちな妄想ばかりする変態っ子",
       "actions" => [
-          [
-            "type" => "postback",
-            "label" => "予約する",
-            "data" => "action=buy&itemid=123"
-          ],
-          [
-            "type" => "postback",
-            "label" => "電話する",
-            "data" => "action=pcall&itemid=123"
-          ],
           [
             "type" => "uri",
             "label" => "詳しく見る",
@@ -45,15 +35,15 @@ if ($text == 'はい') {
           ],
           [
             "type" => "message",
-            "label" => "違うやつ",
-            "text" => "違うやつお願い"
+            "label" => "違う子がいい",
+            "text" => "違う子がいい"
           ]
       ]
     ]
   ];
-} else if ($text == 'いいえ') {
+} else if ($text == '真面目ないい子') {
   exit;
-} else if ($text == '違うやつお願い') {
+} else if ($text == '大人の女性') {
   $response_format_text = [
     "type" => "template",
     "altText" => "候補を３つご案内しています。",
@@ -135,17 +125,22 @@ if ($text == 'はい') {
     "altText" => "こんにちわ 何かご用ですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "出会いたいです？？",
+        "text" => "どんな女の子と出会いたい？",
         "actions" => [
             [
               "type" => "message",
-              "label" => "はい",
-              "text" => "はい"
+              "label" => "真面目ないい子",
+              "text" => "真面目ないい子"
             ],
             [
               "type" => "message",
-              "label" => "いいえ",
-              "text" => "いいえ"
+              "label" => "大人の女性",
+              "text" => "大人の女性"
+            ],
+            [
+              "type" => "message",
+              "label" => "えっちな子",
+              "text" => "えっちな子"
             ]
         ]
     ]
