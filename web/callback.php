@@ -154,7 +154,7 @@ if ($text == 'えっちな子') {
 
     $messageData = [
         'type' => 'text',
-        'text' => $message->{"text"}
+        'text' => $text
     ];
 
 $post_data = [
