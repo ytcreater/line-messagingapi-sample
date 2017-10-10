@@ -17,28 +17,10 @@ if($type != "text"){
 	exit;
 }
 
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "テスト",
-    "template" => [
-      "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
-      "title" => "ゆみ♡",
-      "text" => "22歳の大学生。えっちな妄想ばかりする変態っ子",
-      "actions" => [
-          [
-            "type" => "uri",
-            "label" => "詳しく見る",
-            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-          ],
-          [
-            "type" => "message",
-            "label" => "違う子がいい",
-            "text" => "違う子がいい"
-          ]
-      ]
-    ]
-  ];
+    $response_format_text = [
+        'type' => 'text',
+        'text' => $message->{"text"}
+    ];
 
 //返信データ作成
 /*if ($text == 'えっちな子') {
