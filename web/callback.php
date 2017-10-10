@@ -16,7 +16,6 @@ $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 if($type != "text"){
 	exit;
 }
-
 //返信データ作成
 if ($text == 'えっちな子') {
   $response_format_text = [
